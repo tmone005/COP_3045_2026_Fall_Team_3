@@ -9,7 +9,6 @@ vehicles = pd.read_csv(raw_data_dir / "Vehicles.csv", low_memory=False)
 
 crash_cols = [
     "CRASH_RECORD_ID",
-    "CRASH_DATE",
     "WEATHER_CONDITION",
     "LIGHTING_CONDITION",
     "POSTED_SPEED_LIMIT",
@@ -22,7 +21,7 @@ vehicle_cols = [
     "MAKE",
     "MODEL",
     "FIRST_CONTACT_POINT",
-    "EXCEED_SPEED_LIMIT_I"
+    "CRASH_UNIT_ID"
 ]
 
 print("Crashes missing values:")
@@ -34,7 +33,7 @@ print("\nCrash types:")
 print(crashes["CRASH_TYPE"].value_counts())
 
 print("\nSpeed limit values:")
-print(vehicles["EXCEED_SPEED_LIMIT_I"].value_counts(dropna=False))
+print(vehicles["CRASH_UNIT_ID"].count())
 
 print("\nInjuries:")
 print(crashes["INJURIES_TOTAL"].describe())
