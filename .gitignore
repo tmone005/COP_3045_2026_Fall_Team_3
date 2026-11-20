@@ -1,0 +1,16 @@
+
+# Large datasets
+data/*.csv
+
+# Python temporary files
+__pycache__/
+*.pyc
+
+# Conda environment
+.conda/
+.env/
+
+# Mac files
+.DS_Store
+
+# Generated reports
